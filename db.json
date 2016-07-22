@@ -55,6 +55,14 @@
       "gender": "female",
       "email": "lynnesolomon@insurity.com",
       "phone": "+1 (874) 522-3026"
+    },
+    {
+      "name": "chandan khatwa",
+      "age": 23,
+      "gender": "male",
+      "email": "chandan.khatwa@wipro.com",
+      "phone": 919766668470,
+      "id": 7
     }
   ]
 }
