@@ -1,68 +1,20 @@
 {
   "data": [
     {
-      "id": 0,
-      "age": 38,
-      "name": "Hurst Guy",
-      "gender": "male",
-      "email": "hurstguy@insurity.com",
-      "phone": "+1 (915) 505-3431"
-    },
-    {
       "id": 1,
-      "age": 36,
-      "name": "Yang Lang",
+      "age": 38,
+      "name": "Gray Noel",
       "gender": "male",
-      "email": "yanglang@insurity.com",
-      "phone": "+1 (933) 404-2653"
+      "email": "noelgray@geostele.com",
+      "phone": "+91 (814) 521-3448"
     },
     {
       "id": 2,
-      "age": 24,
-      "name": "Barrett Sparks",
-      "gender": "male",
-      "email": "barrettsparks@insurity.com",
-      "phone": "+1 (893) 410-2935"
-    },
-    {
-      "id": 3,
       "age": 36,
-      "name": "Jarvis Ortega",
+      "name": "Hartman Phelps",
       "gender": "male",
-      "email": "jarvisortega@insurity.com",
-      "phone": "+1 (962) 443-3694"
-    },
-    {
-      "id": 4,
-      "age": 22,
-      "name": "Sophia Thompson",
-      "gender": "female",
-      "email": "sophiathompson@insurity.com",
-      "phone": "+1 (835) 448-3688"
-    },
-    {
-      "id": 5,
-      "age": 34,
-      "name": "Christian Wiley",
-      "gender": "female",
-      "email": "christianwiley@insurity.com",
-      "phone": "+1 (996) 584-2523"
-    },
-    {
-      "id": 6,
-      "age": 24,
-      "name": "Lynne Solomon",
-      "gender": "female",
-      "email": "lynnesolomon@insurity.com",
-      "phone": "+1 (874) 522-3026"
-    },
-    {
-      "name": "chandan khatwa",
-      "age": 23,
-      "gender": "male",
-      "email": "chandan.khatwa@wipro.com",
-      "phone": 919766668470,
-      "id": 7
+      "email": "phelpshartman@geostele.com",
+      "phone": "+91 (906) 428-2371"
     }
   ]
 }

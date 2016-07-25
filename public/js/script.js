@@ -5,12 +5,13 @@ $('#show').click(function(){
 		success: function(result){
 		  table_header = table_content='';
 	  	table_header +='<tr><th>ID</th>'+'<th>Name</th>'+'<th>Age</th>'+'<th>Gender</th>'+'<th>E-mail</th>'+'<th>Phone</th>'+'<th>Action</th></tr>';
-		  $(result).each(function(i, item) {
+      $(result).each(function(i, item) {
        	table_content +='<tr><td>'+result[i].id+'</td>'+'<td>'+result[i].name+'</td>'+'<td>'+result[i].age+'</td>'+'<td>'+result[i].gender+'</td>'+'<td>'+result[i].email+'</td>'+'<td>'+result[i].phone+'</td><td><button class="btn btn-info">Modify</button> <button class="btn btn-danger" id="del">Delete</button></td></tr>';	
-      });
-
+  });
+//console.log(table_content);
 	    $('thead').append(table_header);
       $('tbody').append(table_content);
+  
     }
 
 	});
@@ -39,18 +40,20 @@ $('#show').click(function(){
           phone: Phone
         })
       });
-  });
+   });
 
-//for delete operation
-// $('#del').click(function(e){
+    //for delete operation
+ $('#contented').delegate('#del', 'click', function() {
+   var row = $(this).parent().parent();
+   var id = row.children('td:first').text();
+   console.log(id);
+  $.ajax({
+              url: "http://localhost:8080/data/" +id,
+              type: 'Delete',
+              success: function() {
+                  row.remove();
+                  alert("successfully deleted");
+              }
+        });
 
-// 	var row =$(this).closest('tr'),
-//    id = row.attr('id');
- // $.ajax({
- //            url: "http://localhost:8080/data/" + id,
- //            success: function() {
- //                alert("successfully deleted");
- //                row.remove();
- //            }
- //      });
-// });
+ });
