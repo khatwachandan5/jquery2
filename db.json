@@ -1,22 +1,6 @@
 {
   "data": [
     {
-      "id": 12,
-      "age": 21,
-      "name": "Graves Juana",
-      "gender": "female",
-      "email": "juanagraves@xurban.com",
-      "phone": "+91 (943) 575-2080"
-    },
-    {
-      "id": 13,
-      "age": 27,
-      "name": "Atkins Sears",
-      "gender": "male",
-      "email": "searsatkins@xurban.com",
-      "phone": "+91 (913) 534-3162"
-    },
-    {
       "id": 14,
       "age": 29,
       "name": "Santos Lowery",
