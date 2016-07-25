@@ -1,22 +1,6 @@
 {
   "data": [
     {
-      "id": 10,
-      "age": 28,
-      "name": "Chan Mccoy",
-      "gender": "male",
-      "email": "mccoychan@xurban.com",
-      "phone": "+91 (865) 427-2249"
-    },
-    {
-      "id": 11,
-      "age": 38,
-      "name": "Garcia Todd",
-      "gender": "male",
-      "email": "toddgarcia@xurban.com",
-      "phone": "+91 (892) 406-2552"
-    },
-    {
       "id": 12,
       "age": 21,
       "name": "Graves Juana",

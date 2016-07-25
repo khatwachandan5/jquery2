@@ -49,7 +49,7 @@ $('#show').click(function(){
             alert("Deleted successfully");
           },
           error:function(){
-           alert("Unable to delete row")
+           alert("Unable to delete row");
         }
       });
   });
@@ -59,9 +59,17 @@ $('#show').click(function(){
   $('.update, .danger').attr("disabled","disabled");
  // console.log($(this));
   $(this).siblings('button').toggleClass('sr-only');
-  $(this).toggle('sr-only');
+  $(this).toggleClass('sr-only');
   $(this).parent().siblings().attr('contenteditable',true);
 });
+//for cancel button toggle
+ $('#contented').delegate('.cancel', 'click', function() {
+  $(this).siblings('button').toggleClass('sr-only');
+  $(this).toggleClass('sr-only');
+  $(this).parent().siblings().attr('contenteditable',false);
+  $('.update, .danger').removeAttr('disabled');;
+});
+
 //for updation operation
  $('#contented').delegate('.change', 'click', function(d) {
     var row = $(this).parent().parent().attr('id'),
@@ -71,6 +79,7 @@ $('#show').click(function(){
         Email =$(this).parent().siblings()[3].innerHTML,
         Phone =$(this).parent().siblings()[4].innerHTML;
         var $this=$(this);
+       // console.log($(this));
     $.ajax({
         type:"Patch",
         url: ' http://localhost:8080/data/' +row,
@@ -84,6 +93,7 @@ $('#show').click(function(){
         }),
         success:function(){
           alert("Updated Successfully");
+          console.log($this);
           $this.toggleClass('sr-only');
           $this.siblings().toggleClass('sr-only');
           $('.update, .danger').removeAttr('disabled');
@@ -96,8 +106,5 @@ $('#show').click(function(){
           $('.update, .danger').removeAttr('disabled');
           $this.parent().siblings().attr("contenteditable",false);
         }
-       //$(this).siblings()
-
    });
-
 });
