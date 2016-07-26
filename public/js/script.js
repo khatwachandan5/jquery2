@@ -1,8 +1,14 @@
+$('#show')
+.click(
+     function ()
+     {
+         $(this).hide();
+     }
+);//for hiding show completed data button once clicked
 $('#show').click(function(){
 
   $('#finding, #search').removeClass('sr-only');
   $('#entry').removeClass('sr-only');
-
   $.ajax({
 
     type:'GET',
