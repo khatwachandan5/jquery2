@@ -1,16 +1,9 @@
-
 body {
    margin-top: 74px;
-   }
-
-.main h2{
-  color: #F8F9F9;
 }
-
-#main1{
-   margin-top: 70px;
-   text-align: center;
- }
-#main2{
-	margin-top:20px;
+.main{
+	color: #F8F9F9;
+}
+#contented{
+	margin-top:40px;
 }

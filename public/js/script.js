@@ -1,4 +1,3 @@
-
 $('#show').click(function(){
 	$.ajax({
 		type:'GET',
@@ -12,99 +11,92 @@ $('#show').click(function(){
 	    $('thead').append(table_header);
       $('tbody').append(table_content);
     }
-	});
-//making button disable once selected
-	 $(this).attr("disabled","disabled");
+	}); //for getting data from db into tables
+	 $(this).attr("disabled","disabled");//making button disable once selected
 });
 //for add new entry operation
-  $('#add').click(function(){
-    var Name =$('#name').val(),
-        Age =$('#age').val(),
-        Sex =$('#sex').val(),
-        Email =$('#mail').val(),
-        Phone =$('#no').val();
-    $.ajax({
-        type:"Post",
-        url: ' http://localhost:8080/data',
-        headers:{'Content-Type':'application/json'},
-        data: JSON.stringify({
-          name : Name,                 
-          age : Age,
-          gender : Sex,
-          email : Email,
-          phone: Phone
-        })
-      });
-   });
-//for delete operation
- $('#contented').delegate('.danger', 'click', function(e) {
-   var row = $(this).parent().parent();
-   var id = $(this).parent().parent().attr('id');
-
+$('#add').click(function(){
+  var Name =$('#name').val(),
+      Age =$('#age').val(),
+      Sex =$('#sex').val(),
+      Email =$('#mail').val(),
+      Phone =$('#no').val();
   $.ajax({
-            url: "http://localhost:8080/data/" +id,
-            type: 'Delete',
-            success: function() {
-            row.remove();
-            alert("Deleted successfully");
-          },
-          error:function(){
-           alert("Unable to delete row");
-        }
-      });
+      type:"Post",
+      url: ' http://localhost:8080/data',
+      headers:{'Content-Type':'application/json'},
+      data: JSON.stringify({
+      name : Name,                 
+      age : Age,
+      gender : Sex,
+      email : Email,
+      phone: Phone
+    })
   });
-
+});
+//for delete operation
+$('#contented').delegate('.danger', 'click', function(e) {
+  var row = $(this).parent().parent();
+  var id = $(this).parent().parent().attr('id');
+  $.ajax({
+      url: "http://localhost:8080/data/" +id,
+      type: 'Delete',
+      success: function() {
+      row.remove();
+      alert("Deleted successfully");
+    },
+    error:function(){
+      alert("Unable to delete row");
+     }
+  });
+});
 //for edit and delete button toggle
- $('#contented').delegate('.update', 'click', function() {
+$('#contented').delegate('.update', 'click', function() {
   $('.update, .danger').attr("disabled","disabled");
- // console.log($(this));
   $(this).siblings('button').toggleClass('sr-only');
   $(this).toggleClass('sr-only');
   $(this).parent().siblings().attr('contenteditable',true);
 });
 //for cancel button toggle
- $('#contented').delegate('.cancel', 'click', function() {
+$('#contented').delegate('.cancel', 'click', function() {
   $(this).siblings('button').toggleClass('sr-only');
   $(this).toggleClass('sr-only');
   $(this).parent().siblings().attr('contenteditable',false);
   $('.update, .danger').removeAttr('disabled');;
 });
-
 //for updation operation
- $('#contented').delegate('.change', 'click', function(d) {
-    var row = $(this).parent().parent().attr('id'),
-        Name =$(this).parent().siblings()[0].innerHTML,
-        Age =$(this).parent().siblings()[1].innerHTML,
-        Sex =$(this).parent().siblings()[2].innerHTML,
-        Email =$(this).parent().siblings()[3].innerHTML,
-        Phone =$(this).parent().siblings()[4].innerHTML;
-        var $this=$(this);
-       // console.log($(this));
+$('#contented').delegate('.change', 'click', function(d) {
+  var row = $(this).parent().parent().attr('id'),
+      Name =$(this).parent().siblings()[0].innerHTML,
+      Age =$(this).parent().siblings()[1].innerHTML,
+      Sex =$(this).parent().siblings()[2].innerHTML,
+      Email =$(this).parent().siblings()[3].innerHTML,
+      Phone =$(this).parent().siblings()[4].innerHTML,
+      $this=$(this);
     $.ajax({
-        type:"Patch",
-        url: ' http://localhost:8080/data/' +row,
-        headers:{'Content-Type':'application/json'},
-        data:JSON.stringify({
-          "name" : Name,                 
-          "age" : Age,
-          "gender" : Sex,
-          "email" : Email,
-          "phone": Phone
-        }),
-        success:function(){
-          alert("Updated Successfully");
-          console.log($this);
-          $this.toggleClass('sr-only');
-          $this.siblings().toggleClass('sr-only');
-          $('.update, .danger').removeAttr('disabled');
-          $this.parent().siblings().attr("contenteditable",false); 
-        },
-        error:function(){
-           alert("Unable to update the row");
-          $this.toggleClass('sr-only');
-          $this.siblings().toggleClass('sr-only');
-          $('.update, .danger').removeAttr('disabled');
-          $this.parent().siblings().attr("contenteditable",false);
-        }
-   });
+      type:"Patch",
+      url: ' http://localhost:8080/data/' +row,
+      headers:{'Content-Type':'application/json'},
+      data:JSON.stringify({
+      "name" : Name,                 
+      "age" : Age,
+      "gender" : Sex,
+      "email" : Email,
+      "phone": Phone
+    }),
+    success:function(){
+      alert("Updated Successfully");
+      $this.toggleClass('sr-only');
+      $this.siblings().toggleClass('sr-only');
+      $('.update, .danger').removeAttr('disabled');
+      $this.parent().siblings().attr("contenteditable",false); 
+    },
+    error:function(){
+      alert("Unable to update the row");
+      $this.toggleClass('sr-only');
+      $this.siblings().toggleClass('sr-only');
+      $('.update, .danger').removeAttr('disabled');
+      $this.parent().siblings().attr("contenteditable",false);
+    }
+  });
 });
