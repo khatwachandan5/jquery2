@@ -1,28 +1,12 @@
 {
   "data": [
     {
-      "id": 2,
-      "age": 31,
-      "name": "Sawyer Sharpe",
-      "gender": "male",
-      "email": "sharpesawyer@exerta.com",
-      "phone": "+91 (940) 504-3275"
-    },
-    {
-      "id": 3,
-      "age": 20,
-      "name": "Paul Oconnor",
-      "gender": "male",
-      "email": "oconnorpaul@exerta.com",
-      "phone": "+91 (839) 451-2072"
-    },
-    {
       "id": 4,
       "age": 24,
       "name": "Copeland Hallie",
       "gender": "female",
       "email": "halliecopeland@exerta.com",
-      "phone": "+91 (944) 568-3365"
+      "phone": "+91 (944) 568-3362"
     },
     {
       "id": 5,

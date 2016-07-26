@@ -1,4 +1,6 @@
 $('#show').click(function(){
+  $('#finding, #search').removeClass('sr-only');
+  $('#entry').removeClass('sr-only');
 	$.ajax({
 		type:'GET',
 		url: "http://localhost:8080/data/",
@@ -24,8 +26,8 @@ $('#add').click(function(){
   $.ajax({
       type:"Post",
       url: ' http://localhost:8080/data',
-      headers:{'Content-Type':'application/json'},
-      data: JSON.stringify({
+      'Content-Type':'application/json',
+      data:({
       name : Name,                 
       age : Age,
       gender : Sex,
@@ -72,19 +74,20 @@ $('#contented').delegate('.change', 'click', function(d) {
       Sex =$(this).parent().siblings()[2].innerHTML,
       Email =$(this).parent().siblings()[3].innerHTML,
       Phone =$(this).parent().siblings()[4].innerHTML,
-      $this=$(this);
-    $.ajax({
-      type:"Patch",
-      url: ' http://localhost:8080/data/' +row,
-      headers:{'Content-Type':'application/json'},
-      data:JSON.stringify({
+      $this=$(this),
+      obj={
       "name" : Name,                 
       "age" : Age,
       "gender" : Sex,
       "email" : Email,
       "phone": Phone
-    }),
-    success:function(){
+    };
+    $.ajax({
+      type:"Patch",
+      url: ' http://localhost:8080/data/' +row,
+      'Content-Type':'application/json',
+      data:obj,
+      success:function(){
       alert("Updated Successfully");
       $this.toggleClass('sr-only');
       $this.siblings().toggleClass('sr-only');

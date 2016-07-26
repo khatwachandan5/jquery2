@@ -4,6 +4,9 @@ body {
 .main{
 	color: #F8F9F9;
 }
-#contented{
+#contented , #conten{
 	margin-top:40px;
+}
+.row{
+	margin-left: 180px;
 }
