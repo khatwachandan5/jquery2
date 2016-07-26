@@ -1,114 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--Tab icon-->
-    <link rel="shortcut icon" href="images/search.png">
-    <title>Search</title>
-    <meta charset="utf-8">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-glyphicons.css">
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">  
-  </head>
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top"> 
-        <div class="container main">
-          <h2>DataBase</h2>
-        </div><!-- end container -->
-    </div><!-- end navbar -->
-    <div class="container">
-       <div class="row ">
-          <div class="col col-sm-3">
-            <button type="button" class="btn btn-primary btn-block" id="show">Show Complete Data</button>    
-          </div>
+<head>
+  <!--Tab icon-->
+  <link rel="shortcut icon" href="images/search.png">
+  <title>Search</title>
+  <meta charset="utf-8">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-glyphicons.css">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">  
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top"> 
+    <div class="container main">
+      <h2>DataBase</h2>
+    </div><!-- end container -->
+  </div><!-- end navbar -->
+  <div class="container">
+    <div class="row ">
+      <div class="col col-sm-3">
+        <button type="button" class="btn btn-primary btn-block" id="show">Show Complete Data</button>    
+      </div>
+      <div class="col col-sm-3">
+        <button type="button" data-toggle="modal" href="#display" class="btn btn-primary btn-block sr-only" id="entry">Add a Entry in DataBase</button>
+        <!-- Modal -->
+        <div class="modal fade" tabindex="-1" id="display">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add new entry</h4>
+              </div><!-- end modal-header -->
+              <div class="modal-body">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label" for="name">Name:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control" id="name" placeholder="Enter your Full Name" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label" for="age">Age:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control" id="age" placeholder="Enter your Age" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label" for="sex">Gender:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control" id="sex" placeholder="Enter your Gender" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label" for="mail">E-mail:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control" id="mail" placeholder="Enter your mail ID" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label" for="no">Phone:</label>
+                    <div class="col-lg-10">
+                      <input class="form-control" id="no" placeholder="Enter your Phone Number" type="text">
+                    </div>
+                  </div>
+                </from>
+              </div><!--modal body-->
+              <div class="modal-footer">
+                <button type="button" id="add" class="btn btn-success" data-dismiss="modal"><span class="glyphicon glyphicon-plus"></span> Add</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+              </div><!--modal footer-->
+            </div><!--modal content-->
+          </div><!--modal dialog-->
+        </div><!--modal fade-->  
+      </div><!--end of col col-sm-4-->
+      <div class="col col-sm-6">
         <div class="col col-sm-3">
-           <button type="button" data-toggle="modal" href="#display" class="btn btn-primary btn-block sr-only" id="entry">Add a Entry in DataBase</button> 
-           <!-- Modal -->
-          <div class="modal fade" tabindex="-1" id="display">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <button class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Add new entry</h4>
-                      </div><!-- end modal-header -->
-                      <div class="modal-body">
-                      <form class="form-horizontal">
-                        <div class="form-group">
-                          <label class="col-lg-2 control-label" for="name">Name:</label>
-                          <div class="col-lg-10">
-                            <input class="form-control" id="name" placeholder="Enter your Full Name" type="text">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-lg-2 control-label" for="age">Age:</label>
-                          <div class="col-lg-10">
-                            <input class="form-control" id="age" placeholder="Enter your Age" type="text">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-lg-2 control-label" for="sex">Gender:</label>
-                          <div class="col-lg-10">
-                            <input class="form-control" id="sex" placeholder="Enter your Gender" type="text">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-lg-2 control-label" for="mail">E-mail:</label>
-                          <div class="col-lg-10">
-                            <input class="form-control" id="mail" placeholder="Enter your mail ID" type="text">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-lg-2 control-label" for="no">Phone:</label>
-                          <div class="col-lg-10">
-                            <input class="form-control" id="no" placeholder="Enter your Phone Number" type="text">
-                          </div>
-                        </div>
-                      </from>
-                    </div><!--modal body-->
-                    <div class="modal-footer">
-                        <button type="button" id="add" class="btn btn-success" data-dismiss="modal">Add</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                    </div><!--modal footer-->
-                  </div><!--modal content-->
-                </div><!--modal dialog-->
-              </div><!--modal fade-->  
-            </div><!--end of col col-sm-4-->
-            <div class="col col-sm-6">
-              <div class="col col-sm-3">
-                  <input class="form-control sr-only" id="finding" placeholder="Search" type="text">
-              </div>
-              <div class="col col-sm-3">
-                <button type="button" class="btn btn-primary btn-block sr-only" id="search">Search</button> 
-              </div>   
-          </div>
-            </div>
-        <div class="container">
-           <table class="datatable table table-hover table-bordered" id="contented">
-              <thead>
-                <!--header of table will load here-->
-              </thead>
-              <tbody>
-                <!--content of json will load here-->
-              </tbody>
-            </table> <!--end of table-->
-        </div> <!--end of container-->
-        <div class="container"><!-- will display on filtering-->
-           <table class="datatable table table-hover table-bordered" id="conten">
-              <thead>
-                <!--header of table will load here-->
-              </thead>
-              <tbody>
-                <!--content of json will load here-->
-              </tbody>
-            </table> <!--end of table-->
-        </div> <!--end of container-->
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="js/jquery-3.1.0.js"></script>
-      <!-- Bootstrap JS -->
-      <script src="js/bootstrap.min.js"></script>
-      <!--custom js-->
-      <script src="js/script.js"></script>
+          <input class="form-control sr-only" id="finding" placeholder="Search" type="text">
+        </div>
+        <div class="col col-sm-3">
+          <button type="button" class="btn btn-primary btn-block sr-only" id="search">Search</button> 
+        </div>   
+      </div>
+    </div>
+    <div class="container">
+      <table class="datatable table table-hover table-bordered" id="contented">
+        <thead>
+          <!--header of table will load here-->
+        </thead>
+        <tbody>
+          <!--content of json will load here-->
+        </tbody>
+      </table> <!--end of table-->
+    </div> <!--end of container-->
+    <div class="container"><!-- will display on filtering-->
+      <table class="datatable table table-hover table-bordered" id="conten">
+        <thead>
+          <!--header of table will load here-->
+        </thead>
+        <tbody>
+          <!--content of json will load here-->
+        </tbody>
+      </table> <!--end of table-->
+    </div> <!--end of container-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.0.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--custom js-->
+    <script src="js/script.js"></script>
   </body>
 </html>
