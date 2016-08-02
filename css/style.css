@@ -2,3 +2,7 @@
  .md-toolbar-tools h3{
  	padding-left: 5px;
  }
+ .right{
+ 	position: absolute;
+ 	right: 20px;
+ }
