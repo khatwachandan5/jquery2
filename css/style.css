@@ -2,7 +2,11 @@
  .md-toolbar-tools h3{
  	padding-left: 5px;
  }
+ /* button positioning */
  .right{
  	position: absolute;
  	right: 20px;
  }
+md-content{
+	margin-top: 28px;
+}
