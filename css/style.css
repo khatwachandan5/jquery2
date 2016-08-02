@@ -1,9 +1,4 @@
-body {
-	margin-top: 74px;
-}
-.main{
-	color: #F8F9F9;
-}
-#contented , #conten{
-	margin-top:40px;
-}
+/* header alignment */
+ .md-toolbar-tools h3{
+ 	padding-left: 5px;
+ }
