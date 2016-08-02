@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-glyphicons.css">
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="includes/css/angular-material.css">
   <!--Angular Material icons-->
@@ -48,8 +49,10 @@
                             <td>{{employee.email}}</td>
                             <td>{{employee.phone}}</td>
                             <td>
-                                <button class="btn btn-info" ng-click="update(employee.id)">Update</button>
-                                <button class="btn btn-danger" ng-click="delete(employee.id)">Delete</button>
+                                <button class="btn btn-warning update" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil"></span> Update</button>
+                                <button class="btn btn-danger danger" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                                <button class="btn btn btn-success change" style="margin-left: 10px;"><span class="glyphicon glyphicon-ok"></span> Save</button>
+                                <button class="btn btn-danger cancel" style="margin-left: 10px;"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
                             </td>
                         </tr>
                     </tbody>
