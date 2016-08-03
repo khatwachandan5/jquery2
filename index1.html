@@ -5,7 +5,7 @@
   <!--tab icon-->
   <link rel="shortcut icon" href="images/search.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-glyphicons.css">
   <!-- Angular Material style sheet -->
@@ -23,55 +23,59 @@
       <div class="md-toolbar-tools">
         <span><i class="material-icons">storage</i></span>
         <h3>DataBase</h3>
-        <md-button class="md-raised right" ng-click="showAll()">Show Data List</md-button>
       </div> 
     </md-toolbar>
     <!-- container -->
     <md-content>
-       <table class="datatable table table-hover table-bordered" id="contented">
-                    <thead>
-                        <tr ng-show = "IsVisible">
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="employee in employees">
-                            <td>{{employee.id}}</td>
-                            <td>{{employee.name}}</td>
-                            <td>{{employee.age}}</td>
-                            <td>{{employee.gender}}</td>
-                            <td>{{employee.email}}</td>
-                            <td>{{employee.phone}}</td>
-                            <td>
-                                <button class="btn btn-warning update" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil"></span> Update</button>
-                                <button class="btn btn-danger danger" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash"></span> Delete</button>
-                                <button class="btn btn btn-success change" style="margin-left: 10px;"><span class="glyphicon glyphicon-ok"></span> Save</button>
-                                <button class="btn btn-danger cancel" style="margin-left: 10px;"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-    </md-content>
+    <md-tabs  md-dynamic-height>
+      <md-tab id="tab1">
+        <md-tab-label>Listing Complete data</md-tab-label>
+        <md-tab-body>
+ <table class="datatable table table-hover table-bordered" id="contented">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="employee in employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="tab2">
+        <md-tab-label>Crud Operation</md-tab-label>
+        <md-tab-body>
+        </md-tab-body>
+      </md-tab>
+    </md-tabs>
+  </md-content>
   </div>
- <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.1.0.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="js/bootstrap.min.js"></script>
-<!-- Angular Material requires Angular.js Libraries -->
-<script src="includes/js/angular.js"></script>
-<script src="includes/js/angular-animate.js"></script>
-<script src="includes/js/angular-aria.js"></script>
-<script src="includes/js/angular-messages.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-3.1.0.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="includes/js/angular.js"></script>
+  <script src="includes/js/angular-animate.js"></script>
+  <script src="includes/js/angular-aria.js"></script>
+  <script src="includes/js/angular-messages.js"></script>
 
-<!-- Angular Material Library -->
-<script src="includes/js/angular-material.js"></script>
-<script src="js/script.js"></script>
+  <!-- Angular Material Library -->
+  <script src="includes/js/angular-material.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 

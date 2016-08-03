@@ -767,62 +767,6 @@
       "gender": "female",
       "email": "lanaconrad@aquacine.com",
       "phone": "+91 (969) 414-2724"
-    },
-    {
-      "id": 96,
-      "name": "Lottie Hancock",
-      "age": 33,
-      "gender": "female",
-      "email": "lottiehancock@aquacine.com",
-      "phone": "+91 (834) 493-3742"
-    },
-    {
-      "id": 97,
-      "name": "Marjorie Sargent",
-      "age": 29,
-      "gender": "female",
-      "email": "marjoriesargent@aquacine.com",
-      "phone": "+91 (928) 432-3180"
-    },
-    {
-      "id": 98,
-      "name": "Haynes Berry",
-      "age": 39,
-      "gender": "male",
-      "email": "haynesberry@aquacine.com",
-      "phone": "+91 (848) 438-2884"
-    },
-    {
-      "id": 99,
-      "name": "Mosley Farrell",
-      "age": 33,
-      "gender": "male",
-      "email": "mosleyfarrell@aquacine.com",
-      "phone": "+91 (845) 455-2897"
-    },
-    {
-      "id": 100,
-      "name": "Byers Mccullough",
-      "age": 27,
-      "gender": "male",
-      "email": "byersmccullough@aquacine.com",
-      "phone": "+91 (966) 549-2440"
-    },
-    {
-      "id": 101,
-      "name": "Lambert Gonzales",
-      "age": 27,
-      "gender": "male",
-      "email": "lambertgonzales@aquacine.com",
-      "phone": "+91 (894) 485-2929"
-    },
-    {
-      "id": 102,
-      "name": "Alyce Myers",
-      "age": 24,
-      "gender": "female",
-      "email": "alycemyers@aquacine.com",
-      "phone": "+91 (996) 456-3368"
     }
   ]
 }
