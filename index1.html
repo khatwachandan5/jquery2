@@ -58,6 +58,32 @@
       <md-tab id="tab2">
         <md-tab-label>Crud Operation</md-tab-label>
         <md-tab-body>
+        <table class="datatable table table-hover table-bordered" id="contented">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="employee in employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.phone}}</td>
+            <td>
+              <button class="btn btn-warning update" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil"></span> Update</button><button class="btn btn-danger danger" style="margin-left: 10px;" ng-click="delete(employee.id)"><span class="glyphicon glyphicon-trash"></span> Delete</button><button class="btn btn btn-success sr-only change" style="margin-left: 10px;"><span class="glyphicon glyphicon-ok"></span> Save</button><button class="btn btn-danger sr-only cancel" style="margin-left: 10px;"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
         </md-tab-body>
       </md-tab>
     </md-tabs>

@@ -751,22 +751,6 @@
       "gender": "female",
       "email": "claudetteflynn@aquacine.com",
       "phone": "+91 (831) 474-3032"
-    },
-    {
-      "id": 94,
-      "name": "Stanley Webb",
-      "age": 36,
-      "gender": "male",
-      "email": "stanleywebb@aquacine.com",
-      "phone": "+91 (854) 401-2218"
-    },
-    {
-      "id": 95,
-      "name": "Lana Conrad",
-      "age": 25,
-      "gender": "female",
-      "email": "lanaconrad@aquacine.com",
-      "phone": "+91 (969) 414-2724"
     }
   ]
 }
