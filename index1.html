@@ -23,6 +23,10 @@
       <div class="md-toolbar-tools">
         <span><i class="material-icons">storage</i></span>
         <h3>DataBase</h3>
+                <md-button class="md-fab md-mini arrange">
+          <i class="material-icons ">notifications</i></md-icon>
+        </md-button>
+
       </div> 
     </md-toolbar>
     <!-- container -->
@@ -31,7 +35,7 @@
       <md-tab id="tab1">
         <md-tab-label>Listing Complete data</md-tab-label>
         <md-tab-body>
- <table class="datatable table table-hover table-bordered" id="contented">
+ <table class="datatable table table-hover table-bordered" ng-cloak id="contented">
         <thead>
           <tr>
             <th>Id</th>
@@ -53,6 +57,7 @@
           </tr>
         </tbody>
       </table>
+      
         </md-tab-body>
       </md-tab>
       <md-tab id="tab2">
@@ -79,7 +84,13 @@
             <td>{{employee.email}}</td>
             <td>{{employee.phone}}</td>
             <td>
-              <button class="btn btn-warning update" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil"></span> Update</button><button class="btn btn-danger danger" style="margin-left: 10px;" ng-click="delete(employee.id)"><span class="glyphicon glyphicon-trash"></span> Delete</button><button class="btn btn btn-success sr-only change" style="margin-left: 10px;"><span class="glyphicon glyphicon-ok"></span> Save</button><button class="btn btn-danger sr-only cancel" style="margin-left: 10px;"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+              <button class="btn btn-warning" ng-click="toggleCustom($index)" ng-disabled="custom" ng-hide="$index===activeIndex" ng-model="hiding" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil"></span> Update</button>
+
+              <button class="btn btn-danger" ng-hide="$index===activeIndex" style="margin-left: 10px;" ng-click="delete(employee.id)"  ng-disabled="custom" ng-model="hiding" ><span class="glyphicon glyphicon-trash"></span> Delete</button>
+
+              <button class="btn btn btn-success" ng-hide="$index!==activeIndex" style="margin-left: 10px;"><span class="glyphicon glyphicon-ok"></span> Save</button>
+
+              <button class="btn btn-danger" ng-hide="$index!==activeIndex" ng-click="togglecancel($index)" style="margin-left: 10px;"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
             </td>
           </tr>
         </tbody>
@@ -88,6 +99,7 @@
       </md-tab>
     </md-tabs>
   </md-content>
+ 
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-3.1.0.js"></script>

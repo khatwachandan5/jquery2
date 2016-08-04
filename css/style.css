@@ -2,8 +2,8 @@
  .md-toolbar-tools h3{
  	padding-left: 5px;
  }
- /* button positioning */
- .right{
+ /* notify positioning */
+ .arrange{
  	position: absolute;
  	right: 20px;
  }

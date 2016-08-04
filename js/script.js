@@ -1,10 +1,24 @@
-angular.module('MyApp', ['ngMaterial'])
+var myApp = angular.module('MyApp', ['ngMaterial'])
 .controller('AppCtrl', ['$scope','$http',function($scope,$http) {
     var request=$http.get('http://localhost:8081/data').then(function(response){
     
       $scope.employees=response.data;
-    
+       $scope.custom = false;
+       $scope.cancel=false;
+       $scope.activeIndex = -1;
+        $scope.toggleCustom = function(index) {
+            $scope.activeIndex = index;
+
+            $scope.custom = $scope.custom === false ? true: false;
+            $scope.cancel = $scope.cancel === false ? true: false;
+        };
+        $scope.togglecancel = function() {
+            $scope.activeIndex = -1;
+            $scope.cancel = $scope.cancel === false ? true: false;
+            $scope.custom = $scope.custom === false ? true: false;
+        };
     });
+
   function AppCtrl ( $scope ) {
     $scope.data = {
       selectedIndex: 0,
@@ -22,9 +36,6 @@ angular.module('MyApp', ['ngMaterial'])
 
   $scope.IsVisible = false;
 
-  // displaying all data
-  
-  
   //delete operation
   $scope.delete = function(id) {
           var verify = confirm('Are you sure to delete?');
@@ -44,7 +55,6 @@ angular.module('MyApp', ['ngMaterial'])
         }
 
   //update operation
-  //Add operation
-  //Search operation
-        
+  //Add operation        
 }]);
+

@@ -719,38 +719,6 @@
       "gender": "female",
       "email": "paulinecraig@aquacine.com",
       "phone": "+91 (907) 421-3663"
-    },
-    {
-      "id": 90,
-      "name": "Owens Casey",
-      "age": 38,
-      "gender": "male",
-      "email": "owenscasey@aquacine.com",
-      "phone": "+91 (850) 585-2756"
-    },
-    {
-      "id": 91,
-      "name": "Salinas Bass",
-      "age": 25,
-      "gender": "male",
-      "email": "salinasbass@aquacine.com",
-      "phone": "+91 (886) 408-2374"
-    },
-    {
-      "id": 92,
-      "name": "Mildred Ball",
-      "age": 37,
-      "gender": "female",
-      "email": "mildredball@aquacine.com",
-      "phone": "+91 (811) 528-2804"
-    },
-    {
-      "id": 93,
-      "name": "Claudette Flynn",
-      "age": 20,
-      "gender": "female",
-      "email": "claudetteflynn@aquacine.com",
-      "phone": "+91 (831) 474-3032"
     }
   ]
 }
